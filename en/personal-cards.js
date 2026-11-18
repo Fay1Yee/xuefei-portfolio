@@ -4,7 +4,7 @@ export function PersonalCard({React:R,store,profile,projects,id,width,height}) {
   const ref=R.useRef(null);
   const el=R.createElement;
   R.useEffect(()=>{if(phase==='reading')ref.current?.querySelector('.pc-return')?.focus({preventScroll:true});},[phase]);
-  const photo='/xuefei-portfolio/en/scene/assets/profile/xuefei-transparent.png';
+  const photo='/xuefei-portfolio/en/scene/assets/profile/xuefei-portrait.webp';
   const project=(index,cls='')=>el('figure',{className:`pc-project ${cls}`,key:index},el('img',{src:projects[index].cover,alt:projects[index].title,loading:'eager'}),el('figcaption',null,el('span',null,projects[index].no),projects[index].title));
   const chips=items=>el('div',{className:'pc-chips'},...items.map(x=>el('span',{key:x},x)));
   const stamp=el('span',{className:'pc-stamp','aria-hidden':true},'✳');

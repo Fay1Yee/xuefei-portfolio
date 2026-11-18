@@ -49,3 +49,7 @@ body :is(.stage,.mobile-reader) .reading-lightbox__caption{font:400 11px/1.5 'An
 body .natural-loader{background:#f3f8fc!important;color:var(--control-ink)!important}
 body .natural-loader *{font-family:'Anonymous Pro',monospace!important;font-style:normal!important;letter-spacing:0!important;text-shadow:none!important}
 body .natural-loader :is(h1,h2,strong){font:500 22px/1.2 Arial,sans-serif!important;color:var(--control-ink)!important}
+
+.natural-loader>div>i{width:32%;animation:studio-loading 1.25s ease-in-out infinite}
+@keyframes studio-loading{from{transform:translateX(-100%)}to{transform:translateX(420%)}}
+@media(prefers-reduced-motion:reduce){.natural-loader>div>i{width:100%;animation:none}}
